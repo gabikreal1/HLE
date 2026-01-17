@@ -1,0 +1,6 @@
+[submodule "lib/valantis-core"]
+	path = lib/valantis-core
+	url = https://github.com/ValantisLabs/valantis-core
+[submodule "lib/hyper-evm-lib"]
+	path = lib/hyper-evm-lib
+	url = https://github.com/hyperliquid-dev/hyper-evm-lib
