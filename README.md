@@ -1,6 +1,6 @@
 # HOT AMM on Hyperliquid
 
-**Hybrid Order Type AMM with Oracle-Backed Quotes & Precompile-Driven Lending Integration**
+**HYPE AMM with Oracle-Backed Quotes & Precompile-Driven Lending Integration**
 
 Built on [Valantis Sovereign Pools](https://docs.valantis.xyz/design-space) for the Hyperliquid London Hackathon.
 
@@ -61,7 +61,7 @@ fee = 0.3% + sqrt(imbalance_ratio) * 0.1%
 ```
 Balanced pool → low fees. Imbalanced → higher fees incentivize arbitrage.
 
-### 3. HOT ALM (`src/modules/HOTAMM.sol`)
+### 3. HYPE ALM (`src/modules/HYPEAMM.sol`)
 Constant product AMM (x*y=k) implementing Valantis ISovereignALM interface.
 
 ### 4. Quote Validator (`src/quote/QuoteValidator.sol`)
@@ -83,7 +83,7 @@ Moves excess reserves to HyperCore staking via CoreWriter (`0x333333333333333333
 │   ├── modules/              # Core AMM modules
 │   │   ├── HyperCoreOracleModule.sol
 │   │   ├── DynamicFeeModule.sol
-│   │   └── HOTAMM.sol
+│   │   └── HYPEAMM.sol
 │   ├── quote/                # Quote validation
 │   │   └── QuoteValidator.sol
 │   └── orchestrator/         # Capital allocation

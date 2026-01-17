@@ -73,9 +73,9 @@ async function main() {
   await feeModule.waitForDeployment();
   console.log("  Fee Module deployed to:", await feeModule.getAddress());
 
-  // Deploy HOTAMM (ALM)
+  // Deploy HYPEAMM (ALM)
   console.log("\nStep 4: Deploying HOT ALM...");
-  const ALM = await ethers.getContractFactory("HOTAMM");
+  const ALM = await ethers.getContractFactory("HYPEAMM");
   const alm = await ALM.deploy(await pool.getAddress(), deployer.address);
   await alm.waitForDeployment();
   console.log("  ALM deployed to:", await alm.getAddress());

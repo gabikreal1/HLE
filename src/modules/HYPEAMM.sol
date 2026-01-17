@@ -9,7 +9,7 @@ import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol
 import {Math} from "@openzeppelin/contracts/utils/math/Math.sol";
 
 /**
- * @title HOTAMM (Hybrid Order Type ALM)
+ * @title HYPEAMM (HYPE ALM)
  * @notice Constant Function Market Maker ALM for Sovereign Pool
  * @dev Implements x * y = k pricing with concentrated liquidity style bounds
  * 
@@ -18,7 +18,7 @@ import {Math} from "@openzeppelin/contracts/utils/math/Math.sol";
  * - Liquidity provision with LP token accounting
  * - Integration with HyperCore oracle for price bounds
  */
-contract HOTAMM is ISovereignALM {
+contract HYPEAMM is ISovereignALM {
     using SafeERC20 for IERC20;
     using Math for uint256;
 
@@ -62,14 +62,14 @@ contract HOTAMM is ISovereignALM {
     // ERRORS
     // ═══════════════════════════════════════════════════════════════════════════════
 
-    error HOTAMM__OnlyPool();
-    error HOTAMM__OnlyPoolManager();
-    error HOTAMM__InsufficientLiquidity();
-    error HOTAMM__InsufficientLiquidityMinted();
-    error HOTAMM__InsufficientLiquidityBurned();
-    error HOTAMM__InvalidRecipient();
-    error HOTAMM__InsufficientOutputAmount();
-    error HOTAMM__ZeroAmount();
+    error HYPEAMM__OnlyPool();
+    error HYPEAMM__OnlyPoolManager();
+    error HYPEAMM__InsufficientLiquidity();
+    error HYPEAMM__InsufficientLiquidityMinted();
+    error HYPEAMM__InsufficientLiquidityBurned();
+    error HYPEAMM__InvalidRecipient();
+    error HYPEAMM__InsufficientOutputAmount();
+    error HYPEAMM__ZeroAmount();
 
     // ═══════════════════════════════════════════════════════════════════════════════
     // EVENTS
@@ -84,12 +84,12 @@ contract HOTAMM is ISovereignALM {
     // ═══════════════════════════════════════════════════════════════════════════════
 
     modifier onlyPool() {
-        if (msg.sender != address(pool)) revert HOTAMM__OnlyPool();
+        if (msg.sender != address(pool)) revert HYPEAMM__OnlyPool();
         _;
     }
 
     modifier onlyPoolManager() {
-        if (msg.sender != poolManager) revert HOTAMM__OnlyPoolManager();
+        if (msg.sender != poolManager) revert HYPEAMM__OnlyPoolManager();
         _;
     }
 
@@ -142,7 +142,7 @@ contract HOTAMM is ISovereignALM {
         }
 
         if (reserveIn == 0 || reserveOut == 0) {
-            revert HOTAMM__InsufficientLiquidity();
+            revert HYPEAMM__InsufficientLiquidity();
         }
 
         // Constant product: (x + dx) * (y - dy) = x * y
@@ -150,7 +150,7 @@ contract HOTAMM is ISovereignALM {
         uint256 amountOut = (reserveOut * amountIn) / (reserveIn + amountIn);
 
         if (amountOut == 0) {
-            revert HOTAMM__InsufficientOutputAmount();
+            revert HYPEAMM__InsufficientOutputAmount();
         }
 
         return ALMLiquidityQuote({
@@ -186,7 +186,7 @@ contract HOTAMM is ISovereignALM {
             liquidity = liquidity0 < liquidity1 ? liquidity0 : liquidity1;
         }
 
-        if (liquidity == 0) revert HOTAMM__InsufficientLiquidityMinted();
+        if (liquidity == 0) revert HYPEAMM__InsufficientLiquidityMinted();
 
         balanceOf[sender] += liquidity;
         totalSupply += liquidity;
@@ -234,15 +234,15 @@ contract HOTAMM is ISovereignALM {
         uint256 liquidity,
         address recipient
     ) external returns (uint256 amount0, uint256 amount1) {
-        if (liquidity == 0) revert HOTAMM__ZeroAmount();
-        if (recipient == address(0)) revert HOTAMM__InvalidRecipient();
-        if (balanceOf[msg.sender] < liquidity) revert HOTAMM__InsufficientLiquidityBurned();
+        if (liquidity == 0) revert HYPEAMM__ZeroAmount();
+        if (recipient == address(0)) revert HYPEAMM__InvalidRecipient();
+        if (balanceOf[msg.sender] < liquidity) revert HYPEAMM__InsufficientLiquidityBurned();
 
         // Calculate proportional amounts
         amount0 = (liquidity * _reserve0) / totalSupply;
         amount1 = (liquidity * _reserve1) / totalSupply;
 
-        if (amount0 == 0 && amount1 == 0) revert HOTAMM__InsufficientLiquidityBurned();
+        if (amount0 == 0 && amount1 == 0) revert HYPEAMM__InsufficientLiquidityBurned();
 
         // Update state
         balanceOf[msg.sender] -= liquidity;

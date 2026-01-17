@@ -2,7 +2,7 @@
 pragma solidity ^0.8.24;
 
 import "forge-std/Test.sol";
-import {HOTAMM} from "../src/modules/HOTAMM.sol";
+import {HYPEAMM} from "../src/modules/HYPEAMM.sol";
 import {DynamicFeeModule} from "../src/modules/DynamicFeeModule.sol";
 import {QuoteValidator} from "../src/quote/QuoteValidator.sol";
 import {IQuoteValidator} from "../src/interfaces/IQuoteValidator.sol";
@@ -64,7 +64,7 @@ contract MockOracleModuleE2E is IOracleModule {
  */
 contract E2ETest is Test {
     // Contracts
-    HOTAMM public alm;
+    HYPEAMM public alm;
     DynamicFeeModule public feeModule;
     QuoteValidator public quoteValidator;
     MockOracleModuleE2E public oracle;
@@ -93,7 +93,7 @@ contract E2ETest is Test {
         pool = new MockSovereignPool(address(hype), address(usdc));
 
         // Deploy modules
-        alm = new HOTAMM(address(pool), poolManager);
+        alm = new HYPEAMM(address(pool), poolManager);
         feeModule = new DynamicFeeModule(address(pool), poolManager);
         oracle = new MockOracleModuleE2E(INITIAL_PRICE);
         quoteValidator = new QuoteValidator(address(pool), address(oracle), strategist);

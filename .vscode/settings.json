@@ -1,0 +1,11 @@
+{
+  "solidity.packageDefaultDependenciesContractsDirectory": "src",
+  "solidity.packageDefaultDependenciesDirectory": "lib",
+  "solidity.remappings": [
+    "@openzeppelin/contracts/=lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/",
+    "@hyper-evm-lib/=lib/hyper-evm-lib/src/",
+    "@valantis-core/=lib/valantis-core/src/",
+    "forge-std/=lib/hyper-evm-lib/lib/forge-std/src/"
+  ],
+  "solidity.compileUsingRemoteVersion": "v0.8.24"
+}

@@ -2,18 +2,18 @@
 pragma solidity ^0.8.24;
 
 import "forge-std/Test.sol";
-import {HOTAMM} from "../../src/modules/HOTAMM.sol";
+import {HYPEAMM} from "../../src/modules/HYPEAMM.sol";
 import {MockSovereignPool} from "../mocks/MockSovereignPool.sol";
 import {MockERC20} from "../mocks/MockERC20.sol";
 import {ALMLiquidityQuoteInput, ALMLiquidityQuote} from "@valantis-core/ALM/structs/SovereignALMStructs.sol";
 
 /**
- * @title HOTAMMTest
- * @notice Unit tests for the HOTAMM (Liquidity Module)
+ * @title HYPEAMMTest
+ * @notice Unit tests for the HYPEAMM (Liquidity Module)
  * @dev Tests constant product AMM mechanics
  */
-contract HOTAMMTest is Test {
-    HOTAMM public alm;
+contract HYPEAMMTest is Test {
+    HYPEAMM public alm;
     MockSovereignPool public pool;
     MockERC20 public token0;
     MockERC20 public token1;
@@ -34,7 +34,7 @@ contract HOTAMMTest is Test {
         pool = new MockSovereignPool(address(token0), address(token1));
 
         // Deploy ALM
-        alm = new HOTAMM(address(pool), poolManager);
+        alm = new HYPEAMM(address(pool), poolManager);
     }
 
     // ═══════════════════════════════════════════════════════════════════════════════
@@ -90,7 +90,7 @@ contract HOTAMMTest is Test {
 
     function test_OnlyPoolCanDeposit() public {
         vm.prank(lp1);
-        vm.expectRevert(HOTAMM.HOTAMM__OnlyPool.selector);
+        vm.expectRevert(HYPEAMM.HYPEAMM__OnlyPool.selector);
         alm.onDepositLiquidityCallback(100 ether, 100 ether, abi.encode(lp1));
     }
 
@@ -175,7 +175,7 @@ contract HOTAMMTest is Test {
         });
 
         vm.prank(trader);
-        vm.expectRevert(HOTAMM.HOTAMM__OnlyPool.selector);
+        vm.expectRevert(HYPEAMM.HYPEAMM__OnlyPool.selector);
         alm.getLiquidityQuote(input, "", "");
     }
 
