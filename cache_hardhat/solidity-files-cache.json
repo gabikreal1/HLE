@@ -1,0 +1,3094 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/gabrielbandman/Desktop/Hype-AMM/src/interfaces/IHLEALM.sol": {
+      "lastModificationDate": 1768736049857,
+      "contentHash": "2a68d1d3bf550d99caea859343bba594",
+      "sourceName": "src/interfaces/IHLEALM.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../libraries/TwoSpeedEWMA.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IHLEALM"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/src/libraries/TwoSpeedEWMA.sol": {
+      "lastModificationDate": 1768736049839,
+      "contentHash": "556bc60a9d09f4dc005a362e4ca0185b",
+      "sourceName": "src/libraries/TwoSpeedEWMA.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "TwoSpeedEWMA"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/src/modules/HLEALM.sol": {
+      "lastModificationDate": 1768736755320,
+      "contentHash": "ed5a2e4d581b202ef2196babe6f190ab",
+      "sourceName": "src/modules/HLEALM.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "node_modules/@valantis/valantis-core/src/ALM/interfaces/ISovereignALM.sol",
+        "node_modules/@valantis/valantis-core/src/pools/interfaces/ISovereignPool.sol",
+        "node_modules/@valantis/valantis-core/src/ALM/structs/SovereignALMStructs.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "node_modules/@openzeppelin/contracts/access/Ownable2Step.sol",
+        "node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol",
+        "lib/hyper-evm-lib/src/PrecompileLib.sol",
+        "lib/hyper-evm-lib/src/common/HLConversions.sol",
+        "../libraries/L1OracleAdapter.sol",
+        "../libraries/TwoSpeedEWMA.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "HLEALM"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/src/libraries/L1OracleAdapter.sol": {
+      "lastModificationDate": 1768736049835,
+      "contentHash": "280c66e9bb8ebd863a363dbce7232595",
+      "sourceName": "src/libraries/L1OracleAdapter.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "lib/hyper-evm-lib/src/PrecompileLib.sol",
+        "lib/hyper-evm-lib/src/common/HLConstants.sol",
+        "lib/hyper-evm-lib/src/common/HLConversions.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "L1OracleAdapter"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/src/PrecompileLib.sol": {
+      "lastModificationDate": 1768649416024,
+      "contentHash": "b8147ec5bd3256a86407bdc882a69da6",
+      "sourceName": "lib/hyper-evm-lib/src/PrecompileLib.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "./interfaces/ITokenRegistry.sol",
+        "./common/HLConstants.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "PrecompileLib"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/src/common/HLConversions.sol": {
+      "lastModificationDate": 1768649416024,
+      "contentHash": "e85cebb08ee9fee5ff3b1a735247de93",
+      "sourceName": "lib/hyper-evm-lib/src/common/HLConversions.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "./HLConstants.sol",
+        "../PrecompileLib.sol",
+        "node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "HLConversions"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/valantis-core/src/pools/interfaces/ISovereignPool.sol": {
+      "lastModificationDate": 1768644128044,
+      "contentHash": "1579c65f59ca5760f0525ac4ed006915",
+      "sourceName": "lib/valantis-core/src/pools/interfaces/ISovereignPool.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IValantisPool.sol",
+        "../structs/ReentrancyGuardStructs.sol",
+        "../structs/SovereignPoolStructs.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ISovereignPool"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/valantis-core/src/ALM/interfaces/ISovereignALM.sol": {
+      "lastModificationDate": 1768644128041,
+      "contentHash": "1971480011118c591edd00704fad05d8",
+      "sourceName": "lib/valantis-core/src/ALM/interfaces/ISovereignALM.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../structs/SovereignALMStructs.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ISovereignALM"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/access/Ownable2Step.sol": {
+      "lastModificationDate": 1768649431873,
+      "contentHash": "4c23c95621f1bdfb8c47bcb3795c53e8",
+      "sourceName": "lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/access/Ownable2Step.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Ownable2Step"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol": {
+      "lastModificationDate": 1768649431903,
+      "contentHash": "190613e556d509d9e9a0ea43dc5d891d",
+      "sourceName": "lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/valantis-core/src/ALM/structs/SovereignALMStructs.sol": {
+      "lastModificationDate": 1768644128041,
+      "contentHash": "bccfdeea802d0f1791151d3f9c91c365",
+      "sourceName": "lib/valantis-core/src/ALM/structs/SovereignALMStructs.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": []
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1768649431896,
+      "contentHash": "9261adf6457863de3e9892f51317ec89",
+      "sourceName": "lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.16"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol": {
+      "lastModificationDate": 1768649431898,
+      "contentHash": "1fb9edee1d763745a62d0b1954998792",
+      "sourceName": "lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol",
+        "../../../interfaces/IERC1363.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/src/common/HLConstants.sol": {
+      "lastModificationDate": 1768649416024,
+      "contentHash": "b5693d72a6e482a9a3335a07a35e3eb6",
+      "sourceName": "lib/hyper-evm-lib/src/common/HLConstants.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/ICoreWriter.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "HLConstants"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/src/interfaces/ITokenRegistry.sol": {
+      "lastModificationDate": 1768649416025,
+      "contentHash": "efe0904485f57ef556fb2feb2f09d2d3",
+      "sourceName": "lib/hyper-evm-lib/src/interfaces/ITokenRegistry.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ITokenRegistry"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/src/interfaces/ICoreWriter.sol": {
+      "lastModificationDate": 1768649416025,
+      "contentHash": "6c2618928e02f2dffa0a4e42f0e63a3d",
+      "sourceName": "lib/hyper-evm-lib/src/interfaces/ICoreWriter.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ICoreWriter"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol": {
+      "lastModificationDate": 1768649431908,
+      "contentHash": "2adca1150f58fc6f3d1f0a0f22ee7cca",
+      "sourceName": "lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeCast"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/valantis-core/src/pools/structs/ReentrancyGuardStructs.sol": {
+      "lastModificationDate": 1768644128045,
+      "contentHash": "14416b443a7af26d914fe340b2fd43d7",
+      "sourceName": "lib/valantis-core/src/pools/structs/ReentrancyGuardStructs.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": []
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/valantis-core/src/pools/structs/SovereignPoolStructs.sol": {
+      "lastModificationDate": 1768644128045,
+      "contentHash": "2f3b6594b729b38d3a39e77cbdbfa42d",
+      "sourceName": "lib/valantis-core/src/pools/structs/SovereignPoolStructs.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "../../swap-fee-modules/interfaces/ISwapFeeModule.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": []
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/valantis-core/src/pools/interfaces/IValantisPool.sol": {
+      "lastModificationDate": 1768644128044,
+      "contentHash": "481d1ba2064974a0ad5b30141e49c5f9",
+      "sourceName": "lib/valantis-core/src/pools/interfaces/IValantisPool.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IFlashBorrower.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IValantisPool"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/valantis-core/src/swap-fee-modules/interfaces/ISwapFeeModule.sol": {
+      "lastModificationDate": 1768644128047,
+      "contentHash": "80ad6f6fb157a9f495bb507d3c862fed",
+      "sourceName": "lib/valantis-core/src/swap-fee-modules/interfaces/ISwapFeeModule.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ISwapFeeModule",
+        "ISwapFeeModuleMinimal"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/valantis-core/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1768644147201,
+      "contentHash": "df36f7051335cd1e748b1b6463b7fdd3",
+      "sourceName": "lib/valantis-core/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/valantis-core/src/pools/interfaces/IFlashBorrower.sol": {
+      "lastModificationDate": 1768644128044,
+      "contentHash": "d2e69b819433152b3680555af3c7d571",
+      "sourceName": "lib/valantis-core/src/pools/interfaces/IFlashBorrower.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IFlashBorrower"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1768649431873,
+      "contentHash": "d3c790edc9ccf808a17c5a6cd13614fd",
+      "sourceName": "lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/utils/Context.sol": {
+      "lastModificationDate": 1768649431902,
+      "contentHash": "67bfbc07588eb8683b3fd8f6f909563e",
+      "sourceName": "lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/interfaces/IERC1363.sol": {
+      "lastModificationDate": 1768649431880,
+      "contentHash": "a7fd0f05e36b0d0a21c75340c9c639ec",
+      "sourceName": "lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/interfaces/IERC1363.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2"
+      ],
+      "artifacts": [
+        "IERC1363"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/interfaces/IERC20.sol": {
+      "lastModificationDate": 1768649431881,
+      "contentHash": "68620db2da7583d9a4919096ac77f577",
+      "sourceName": "lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/interfaces/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.4.16"
+      ],
+      "artifacts": []
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/interfaces/IERC165.sol": {
+      "lastModificationDate": 1768649431880,
+      "contentHash": "947853028399b7de34bcc3704ee06e99",
+      "sourceName": "lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/interfaces/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        ">=0.4.16"
+      ],
+      "artifacts": []
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1768649431907,
+      "contentHash": "7074c93b1ea0a122063f26ddd1db1032",
+      "sourceName": "lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373335323738393239"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.16"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/src/CoreWriterLib.sol": {
+      "lastModificationDate": 1768649416024,
+      "contentHash": "fce64fec1bad7b1db920c9a08587c8be",
+      "sourceName": "lib/hyper-evm-lib/src/CoreWriterLib.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "./PrecompileLib.sol",
+        "./common/HLConstants.sol",
+        "./common/HLConversions.sol",
+        "./interfaces/ICoreWriter.sol",
+        "./interfaces/ICoreDepositWallet.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "CoreWriterLib"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/lib/hyper-evm-lib/src/interfaces/ICoreDepositWallet.sol": {
+      "lastModificationDate": 1768649416025,
+      "contentHash": "c0b1afec55134a52446d64a0ed1f3cdc",
+      "sourceName": "lib/hyper-evm-lib/src/interfaces/ICoreDepositWallet.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ICoreDepositWallet"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/src/modules/LendingModule.sol": {
+      "lastModificationDate": 1768736049845,
+      "contentHash": "905d0f2607a484acf6235846645fa502",
+      "sourceName": "src/modules/LendingModule.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/ILendingModule.sol",
+        "node_modules/@valantis/valantis-core/src/pools/interfaces/ISovereignPool.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "lib/hyper-evm-lib/src/CoreWriterLib.sol",
+        "lib/hyper-evm-lib/src/common/HLConversions.sol",
+        "lib/hyper-evm-lib/src/PrecompileLib.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ICoreWriter",
+        "LendingModule"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/src/interfaces/ILendingModule.sol": {
+      "lastModificationDate": 1768736049859,
+      "contentHash": "ad49cff2bc2505601f037d2d7a93ba8e",
+      "sourceName": "src/interfaces/ILendingModule.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ILendingModule"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/src/modules/HLEQuoter.sol": {
+      "lastModificationDate": 1768736049849,
+      "contentHash": "e3d0d358708d4ecab8d0062cd40f4a2b",
+      "sourceName": "src/modules/HLEQuoter.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "node_modules/@valantis/valantis-core/src/pools/interfaces/ISovereignPool.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "../libraries/L1OracleAdapter.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "HLEQuoter",
+        "IHLEALMState"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/src/modules/YieldOptimizer.sol": {
+      "lastModificationDate": 1768736173482,
+      "contentHash": "d909343ec1ed7334fad1cb1bd9ed783f",
+      "sourceName": "src/modules/YieldOptimizer.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../libraries/L1OracleAdapter.sol",
+        "../libraries/YieldTracker.sol",
+        "../interfaces/ILendingModule.sol",
+        "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "node_modules/@openzeppelin/contracts/access/Ownable2Step.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "YieldOptimizer"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/src/libraries/YieldTracker.sol": {
+      "lastModificationDate": 1768736049837,
+      "contentHash": "e137557c6c7db110f877e5914285e4f4",
+      "sourceName": "src/libraries/YieldTracker.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "./TwoSpeedEWMA.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "YieldTracker"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/src/interfaces/IYieldOptimizer.sol": {
+      "lastModificationDate": 1768736049855,
+      "contentHash": "c08fcb9c9874c6c0e26a77037aac20a4",
+      "sourceName": "src/interfaces/IYieldOptimizer.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../libraries/YieldTracker.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IYieldOptimizer"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/src/interfaces/ILendingOrchestrator.sol": {
+      "lastModificationDate": 1768736049862,
+      "contentHash": "7e9ce993ef08072baf075db59c519ba1",
+      "sourceName": "src/interfaces/ILendingOrchestrator.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ILendingOrchestrator"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/src/interfaces/IOracleModule.sol": {
+      "lastModificationDate": 1768736049853,
+      "contentHash": "6211256ab7464abf3a0bbb425678b4d5",
+      "sourceName": "src/interfaces/IOracleModule.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IOracleModule"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/src/interfaces/IQuoteValidator.sol": {
+      "lastModificationDate": 1768736049864,
+      "contentHash": "9257e3e7139dae34e2265fe55700ef5a",
+      "sourceName": "src/interfaces/IQuoteValidator.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IOracleModule.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IQuoteValidator"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/src/mocks/TestableHLEALM.sol": {
+      "lastModificationDate": 1768736832830,
+      "contentHash": "57711d04007951cd421a6ebb2e46a7a5",
+      "sourceName": "src/mocks/TestableHLEALM.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../modules/HLEALM.sol",
+        "node_modules/@valantis/valantis-core/src/pools/interfaces/ISovereignPool.sol",
+        "../libraries/TwoSpeedEWMA.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "TestableHLEALM"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/src/mocks/MockERC20.sol": {
+      "lastModificationDate": 1768736049829,
+      "contentHash": "dd9c1b29ddbd09ad0515b44e7708b7e2",
+      "sourceName": "src/mocks/MockERC20.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "MockERC20"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@openzeppelin/contracts/access/Ownable2Step.sol": {
+      "lastModificationDate": 1768736095943,
+      "contentHash": "42f84a0a50cb6b19dcfc4c9a973c9f15",
+      "sourceName": "node_modules/@openzeppelin/contracts/access/Ownable2Step.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable2Step"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol": {
+      "lastModificationDate": 1768736095943,
+      "contentHash": "1535f8c0c68463f8c1b5239f7584e71f",
+      "sourceName": "node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1768736095936,
+      "contentHash": "df36f7051335cd1e748b1b6463b7fdd3",
+      "sourceName": "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/src/pools/interfaces/ISovereignPool.sol": {
+      "lastModificationDate": 1768735347827,
+      "contentHash": "4ec7aeafcadc13ba358503522af292e5",
+      "sourceName": "node_modules/@valantis/valantis-core/src/pools/interfaces/ISovereignPool.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IValantisPool.sol",
+        "../structs/ReentrancyGuardStructs.sol",
+        "../structs/SovereignPoolStructs.sol"
+      ],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": [
+        "ISovereignPool"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/src/ALM/interfaces/ISovereignALM.sol": {
+      "lastModificationDate": 1768735347827,
+      "contentHash": "27de104087620a912a0ca4b3676dd09b",
+      "sourceName": "node_modules/@valantis/valantis-core/src/ALM/interfaces/ISovereignALM.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../structs/SovereignALMStructs.sol"
+      ],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": [
+        "ISovereignALM"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
+      "lastModificationDate": 1768736095946,
+      "contentHash": "1b5d667d3740d866eca0352758e59827",
+      "sourceName": "node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol",
+        "../extensions/IERC20Permit.sol",
+        "../../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/src/ALM/structs/SovereignALMStructs.sol": {
+      "lastModificationDate": 1768735347850,
+      "contentHash": "53ba4c523d77ef58e016e4f5c6e13054",
+      "sourceName": "node_modules/@valantis/valantis-core/src/ALM/structs/SovereignALMStructs.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": []
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol": {
+      "lastModificationDate": 1768736095944,
+      "contentHash": "67cf2dfe1d1c22b4ea7f242e8a17f431",
+      "sourceName": "node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeCast"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1768736095942,
+      "contentHash": "5a20b2cad87ddb61c7a3a6af21289e28",
+      "sourceName": "node_modules/@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1768736095920,
+      "contentHash": "f07feb4a44b1a4872370da5aa70e8e46",
+      "sourceName": "node_modules/@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/src/pools/structs/SovereignPoolStructs.sol": {
+      "lastModificationDate": 1768735347857,
+      "contentHash": "059b4c6a8c4602095c05ca753f93ca49",
+      "sourceName": "node_modules/@valantis/valantis-core/src/pools/structs/SovereignPoolStructs.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "../../swap-fee-modules/interfaces/ISwapFeeModule.sol"
+      ],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": []
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/src/pools/structs/ReentrancyGuardStructs.sol": {
+      "lastModificationDate": 1768735347844,
+      "contentHash": "24be37042363a9dcf4bf6fe7aacb061b",
+      "sourceName": "node_modules/@valantis/valantis-core/src/pools/structs/ReentrancyGuardStructs.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": []
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/src/pools/interfaces/IValantisPool.sol": {
+      "lastModificationDate": 1768735347828,
+      "contentHash": "0aa6fa93eca70822e66abf4a54accf22",
+      "sourceName": "node_modules/@valantis/valantis-core/src/pools/interfaces/IValantisPool.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IFlashBorrower.sol"
+      ],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": [
+        "IValantisPool"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/src/swap-fee-modules/interfaces/ISwapFeeModule.sol": {
+      "lastModificationDate": 1768735347827,
+      "contentHash": "400cb6d335baa3dc8bee6e2e3f714f8c",
+      "sourceName": "node_modules/@valantis/valantis-core/src/swap-fee-modules/interfaces/ISwapFeeModule.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": [
+        "ISwapFeeModule",
+        "ISwapFeeModuleMinimal"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1768735347813,
+      "contentHash": "df36f7051335cd1e748b1b6463b7fdd3",
+      "sourceName": "node_modules/@valantis/valantis-core/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/src/pools/interfaces/IFlashBorrower.sol": {
+      "lastModificationDate": 1768735347816,
+      "contentHash": "7756da8ed196caaa3d665bf26ae29df5",
+      "sourceName": "node_modules/@valantis/valantis-core/src/pools/interfaces/IFlashBorrower.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": [
+        "IFlashBorrower"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1768736095919,
+      "contentHash": "211ffd288c1588ba8c10eae668ca3c66",
+      "sourceName": "node_modules/@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol": {
+      "lastModificationDate": 1768736095937,
+      "contentHash": "525fcdad8d171312933f47baf01d1ed8",
+      "sourceName": "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Permit"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/src/external/ValantisImports.sol": {
+      "lastModificationDate": 1768736294664,
+      "contentHash": "bc519c50a1f4b9ad831a525cd32f169d",
+      "sourceName": "src/external/ValantisImports.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "node_modules/@valantis/valantis-core/src/pools/SovereignPool.sol"
+      ],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": []
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/src/pools/SovereignPool.sol": {
+      "lastModificationDate": 1768735347850,
+      "contentHash": "b2f282ab160aa2efe78f8766783cfa72",
+      "sourceName": "node_modules/@valantis/valantis-core/src/pools/SovereignPool.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+        "../../lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "../../lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol",
+        "../utils/Constants.sol",
+        "../utils/ReentrancyGuard.sol",
+        "../swap-fee-modules/interfaces/ISwapFeeModule.sol",
+        "./interfaces/ISovereignPool.sol",
+        "./interfaces/ISovereignPoolSwapCallback.sol",
+        "./interfaces/IVerifierModule.sol",
+        "../ALM/structs/SovereignALMStructs.sol",
+        "./interfaces/ISovereignVaultMinimal.sol",
+        "../ALM/interfaces/ISovereignALM.sol",
+        "../oracles/interfaces/ISovereignOracle.sol",
+        "./structs/SovereignPoolStructs.sol",
+        "./interfaces/IFlashBorrower.sol"
+      ],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": [
+        "SovereignPool"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/src/utils/ReentrancyGuard.sol": {
+      "lastModificationDate": 1768735347843,
+      "contentHash": "5982614a945551548f4b288dba26c67e",
+      "sourceName": "node_modules/@valantis/valantis-core/src/utils/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/src/oracles/interfaces/ISovereignOracle.sol": {
+      "lastModificationDate": 1768735347827,
+      "contentHash": "2121ec57f59eb9f0ccb3ef29b45fbdf4",
+      "sourceName": "node_modules/@valantis/valantis-core/src/oracles/interfaces/ISovereignOracle.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": [
+        "ISovereignOracle"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/src/utils/Constants.sol": {
+      "lastModificationDate": 1768735347774,
+      "contentHash": "a4f6da7723dad27edf95efbd0c20f5a8",
+      "sourceName": "node_modules/@valantis/valantis-core/src/utils/Constants.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": [
+        "Constants"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/src/pools/interfaces/ISovereignVaultMinimal.sol": {
+      "lastModificationDate": 1768735347827,
+      "contentHash": "c16b2ce7a5eaa8482fad29987e766e4b",
+      "sourceName": "node_modules/@valantis/valantis-core/src/pools/interfaces/ISovereignVaultMinimal.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": [
+        "ISovereignVaultMinimal"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/src/pools/interfaces/IVerifierModule.sol": {
+      "lastModificationDate": 1768735347828,
+      "contentHash": "aa9d96214a70adeb3f4b065cab298608",
+      "sourceName": "node_modules/@valantis/valantis-core/src/pools/interfaces/IVerifierModule.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": [
+        "IVerifierModule"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/src/pools/interfaces/ISovereignPoolSwapCallback.sol": {
+      "lastModificationDate": 1768735347827,
+      "contentHash": "365472a350780cef43721e96223e9fe7",
+      "sourceName": "node_modules/@valantis/valantis-core/src/pools/interfaces/ISovereignPoolSwapCallback.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.19"
+      ],
+      "artifacts": [
+        "ISovereignPoolSwapCallback"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/lib/openzeppelin-contracts/contracts/utils/math/Math.sol": {
+      "lastModificationDate": 1768735347829,
+      "contentHash": "fe63409d8a06818b926cf89e0ea88b1b",
+      "sourceName": "node_modules/@valantis/valantis-core/lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol": {
+      "lastModificationDate": 1768735347845,
+      "contentHash": "a159c68235d1d18f16dd0a57a000daea",
+      "sourceName": "node_modules/@valantis/valantis-core/lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol",
+        "../extensions/IERC20Permit.sol",
+        "../../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/lib/openzeppelin-contracts/contracts/utils/Address.sol": {
+      "lastModificationDate": 1768735347758,
+      "contentHash": "211ffd288c1588ba8c10eae668ca3c66",
+      "sourceName": "node_modules/@valantis/valantis-core/lib/openzeppelin-contracts/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/Users/gabrielbandman/Desktop/Hype-AMM/node_modules/@valantis/valantis-core/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Permit.sol": {
+      "lastModificationDate": 1768735347813,
+      "contentHash": "aa849939a4ae83a4dcb2dca9b3e9e707",
+      "sourceName": "node_modules/@valantis/valantis-core/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": false,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "libraries": {
+            "": {
+              "__CACHE_BREAKER__": "0x0000000000000031373638373336383430393930"
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Permit"
+      ]
+    }
+  }
+}

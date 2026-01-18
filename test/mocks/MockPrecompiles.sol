@@ -12,6 +12,10 @@ contract MockPrecompiles {
     uint64 public mockOraclePrice = 2500 * 1e8;
     uint64 public mockL1BlockNumber = 1000;
     
+    // Per-index price mappings
+    mapping(uint64 => uint64) public spotPrices;
+    mapping(uint32 => uint64) public oraclePrices;
+    
     mapping(address => mapping(uint64 => uint64)) public spotBalances;
     mapping(address => Delegation[]) public delegations;
     mapping(address => DelegatorSummary) public delegatorSummaries;
@@ -59,8 +63,16 @@ contract MockPrecompiles {
         mockSpotPrice = _price;
     }
 
+    function setSpotPrice(uint64 spotIndex, uint64 _price) external {
+        spotPrices[spotIndex] = _price;
+    }
+
     function setOraclePrice(uint64 _price) external {
         mockOraclePrice = _price;
+    }
+
+    function setOraclePrice(uint32 perpIndex, uint64 _price) external {
+        oraclePrices[perpIndex] = _price;
     }
 
     function setL1BlockNumber(uint64 _blockNumber) external {
@@ -86,11 +98,17 @@ contract MockPrecompiles {
 
     /// @notice Simulate spot price precompile (0x808)
     function spotPx(uint64 spotIndex) external view returns (uint64) {
+        if (spotPrices[spotIndex] != 0) {
+            return spotPrices[spotIndex];
+        }
         return mockSpotPrice;
     }
 
     /// @notice Simulate oracle price precompile (0x807)  
     function oraclePx(uint32 perpIndex) external view returns (uint64) {
+        if (oraclePrices[perpIndex] != 0) {
+            return oraclePrices[perpIndex];
+        }
         return mockOraclePrice;
     }
 

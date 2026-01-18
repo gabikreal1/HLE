@@ -1,4 +1,4 @@
-@openzeppelin/contracts/=lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts/
+@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/
 @hyper-evm-lib/=lib/hyper-evm-lib/src/
-@valantis-core/=lib/valantis-core/src/
+@valantis-core/=node_modules/@valantis/valantis-core/src/
 forge-std/=lib/hyper-evm-lib/lib/forge-std/src/

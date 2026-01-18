@@ -1,0 +1,135 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ISovereignALM",
+  "sourceName": "lib/valantis-core/src/ALM/interfaces/ISovereignALM.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "isZeroToOne",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amountInMinusFee",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "feeInBips",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "sender",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "tokenOutSwap",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct ALMLiquidityQuoteInput",
+          "name": "_almLiquidityQuoteInput",
+          "type": "tuple"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_externalContext",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_verifierData",
+          "type": "bytes"
+        }
+      ],
+      "name": "getLiquidityQuote",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "isCallbackOnSwap",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amountOut",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amountInFilled",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct ALMLiquidityQuote",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "onDepositLiquidityCallback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_isZeroToOne",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amountIn",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amountOut",
+          "type": "uint256"
+        }
+      ],
+      "name": "onSwapCallback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

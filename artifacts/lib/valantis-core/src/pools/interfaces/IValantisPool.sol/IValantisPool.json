@@ -1,0 +1,176 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IValantisPool",
+  "sourceName": "lib/valantis-core/src/pools/interfaces/IValantisPool.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "ValantisPool__flashLoan_flashLoanDisabled",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ValantisPool__flashLoan_flashLoanNotRepaid",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ValantisPool__flashLoan_rebaseTokenNotAllowed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ValantisPool__flashloan_callbackFailed",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "initiator",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "Flashloan",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_feeProtocol0Bips",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_feeProtocol1Bips",
+          "type": "uint256"
+        }
+      ],
+      "name": "claimPoolManagerFees",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "feePoolManager0Received",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "feePoolManager1Received",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "claimProtocolFees",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_isTokenZero",
+          "type": "bool"
+        },
+        {
+          "internalType": "contract IFlashBorrower",
+          "name": "_receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "flashLoan",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_gauge",
+          "type": "address"
+        }
+      ],
+      "name": "setGauge",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token0",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token1",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

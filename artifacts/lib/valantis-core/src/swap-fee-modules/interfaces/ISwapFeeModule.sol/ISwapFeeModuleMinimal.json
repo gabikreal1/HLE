@@ -1,0 +1,62 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ISwapFeeModuleMinimal",
+  "sourceName": "lib/valantis-core/src/swap-fee-modules/interfaces/ISwapFeeModule.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_tokenIn",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_tokenOut",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amountIn",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_swapFeeModuleContext",
+          "type": "bytes"
+        }
+      ],
+      "name": "getSwapFeeInBips",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "feeInBips",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "internalContext",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct SwapFeeModuleData",
+          "name": "swapFeeModuleData",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

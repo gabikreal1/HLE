@@ -9,7 +9,8 @@
     "outDir": "./dist",
     "declaration": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "types": ["node", "mocha", "chai"]
   },
   "include": [
     "./scripts",

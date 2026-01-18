@@ -103,4 +103,12 @@ contract MockSovereignPool {
     function setPoolManagerFeeBips(uint256 _poolManagerFeeBips) external {
         poolManagerFeeBips = _poolManagerFeeBips;
     }
+
+    function token0() external view returns (address) {
+        return tokens[0];
+    }
+
+    function token1() external view returns (address) {
+        return tokens[1];
+    }
 }
